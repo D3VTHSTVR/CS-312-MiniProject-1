@@ -39,9 +39,9 @@ CS-312-MiniProject-1/
 ├── public/
 │   ├── css/
 │   │   └── styles.css         # Main styles
-│   └── js/
-│       ├── app.js             # Main Express app
-│       └── posts.js           # Blog post routes and logic
+│   └── images/                # Background and UI images
+├── routes/
+│   └── posts.js               # Blog post routes and logic
 ├── views/
 │   ├── index.ejs              # Main page (feed, post form)
 │   ├── edit.ejs               # Edit post page
@@ -50,6 +50,8 @@ CS-312-MiniProject-1/
 │       └── footer.ejs         # Footer partial
 ├── package.json               # Project metadata and dependencies
 ├── package-lock.json          # Exact dependency versions
+├── app.js                     # Main Express app
+├── .gitignore                 # Files and folders ignored by git
 └── README.md                  # Project documentation
 ```
 
@@ -62,6 +64,9 @@ CS-312-MiniProject-1/
 ## Customization
 - Tweak the look and feel in `public/css/styles.css`.
 - Add more categories or features as needed.
+
+## Notes
+- `.DS_Store` files (created by macOS) are ignored by git and should not appear in the repository.
 
 ## License
 MIT
