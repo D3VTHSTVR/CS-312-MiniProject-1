@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "public/js/index.js",
   "scripts": {
-    "start": "node public/js/app.js",
+    "start": "node app.js",
     "dev": "nodemon public/js/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

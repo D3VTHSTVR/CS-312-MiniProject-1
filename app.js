@@ -1,9 +1,9 @@
 /*
   dependencies:
-  express - web framework for node.js
-  method-override - allows us to use put/delete methods in forms
-  ejs - templating engine for views
-  path - node.js module for handling file paths
+  - express: web framework for node.js
+  - method-override: allows put/delete in forms
+  - ejs: templating engine
+  - path: node.js path utilities
 */
 const express = require('express');
 const methodOverride = require('method-override');
@@ -25,7 +25,7 @@ const app = express();
 */
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 /*
@@ -41,7 +41,7 @@ app.set('views', path.join(__dirname, 'views'));
   - import the posts router
   - use the posts router for all /posts routes (create, read, update, delete)
 */
-const postsRouter = require('../../routes/posts');
+const postsRouter = require('./routes/posts');
 app.use('/posts', postsRouter);
 
 /*
@@ -61,4 +61,4 @@ app.get('/', (req, res) => {
 const port = 3000;
 app.listen(port, () => {
     console.log(`server is running on http://localhost:${port}`);
-}); 
+});
